@@ -1,0 +1,267 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="100%" height="100%">
+  <defs>
+    <!-- Background: Pure Pitch Black like the reference image -->
+    <rect id="bg" width="1000" height="1000" fill="#000000" />
+
+    <!-- Studio Rim Lights -->
+    <!-- Warm Golden Key Light (Left) -->
+    <radialGradient id="warmRimLight" cx="15%" cy="35%" r="45%">
+      <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.3" />
+      <stop offset="50%" stop-color="#D97706" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Cool Blue Rim Light (Right) -->
+    <radialGradient id="coolRimLight" cx="85%" cy="55%" r="45%">
+      <stop offset="0%" stop-color="#3B82F6" stop-opacity="0.25" />
+      <stop offset="60%" stop-color="#1D4ED8" stop-opacity="0.05" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Realistic Skin Base -->
+    <radialGradient id="skinCenter" cx="50%" cy="38%" r="40%">
+      <stop offset="0%" stop-color="#E5B28F" />
+      <stop offset="45%" stop-color="#D49B74" />
+      <stop offset="80%" stop-color="#BC8159" />
+      <stop offset="100%" stop-color="#9C623C" />
+    </radialGradient>
+
+    <!-- Left Cheek Warm Lighting -->
+    <linearGradient id="warmSkinGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#F59E0B" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Right Cheek Cool Fill -->
+    <linearGradient id="coolSkinGlow" x1="100%" y1="0%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#60A5FA" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#60A5FA" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Deep Neck Shadow -->
+    <linearGradient id="neckShadow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4A2814" stop-opacity="0.9" />
+      <stop offset="60%" stop-color="#6E3E20" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#A56A44" stop-opacity="0.2" />
+    </linearGradient>
+
+    <!-- Hoodie Realistic Fabric Gradient -->
+    <linearGradient id="hoodieFabric" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#1E2024" />
+      <stop offset="35%" stop-color="#131417" />
+      <stop offset="70%" stop-color="#0D0E10" />
+      <stop offset="100%" stop-color="#060708" />
+    </linearGradient>
+
+    <!-- Glasses Lens Real Glass Reflection -->
+    <linearGradient id="lensReflect" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.45" />
+      <stop offset="30%" stop-color="#E0F2FE" stop-opacity="0.3" />
+      <stop offset="60%" stop-color="#0284C7" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#0369A1" stop-opacity="0.05" />
+    </linearGradient>
+
+    <!-- Metallic Aglet Gradient -->
+    <linearGradient id="metalAglet" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4B5563" />
+      <stop offset="30%" stop-color="#E5E7EB" />
+      <stop offset="70%" stop-color="#9CA3AF" />
+      <stop offset="100%" stop-color="#374151" />
+    </linearGradient>
+
+    <!-- Drop Shadow Filter for Realistic Depth -->
+    <filter id="shadowDepth" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="15" flood-color="#000000" flood-opacity="0.8" />
+    </filter>
+  </defs>
+
+  <!-- Black Background -->
+  <rect width="1000" height="1000" fill="#000000" />
+  <rect width="1000" height="1000" fill="url(#warmRimLight)" />
+  <rect width="1000" height="1000" fill="url(#coolRimLight)" />
+
+  <g id="mayank-portrait" transform="translate(0, 30)">
+    <!-- 1. TORSO & BLACK HOODIE -->
+    <g id="clothing">
+      <!-- Main Hoodie Shoulders -->
+      <path d="M120,1000 C130,820 180,680 340,640 L420,630 L580,630 L660,640 C820,680 870,820 880,1000 Z" fill="url(#hoodieFabric)" filter="url(#shadowDepth)" />
+
+      <!-- Left Shoulder Warm Rim Light (from key light) -->
+      <path d="M130,980 C140,840 185,710 320,655" stroke="#F59E0B" stroke-width="4.5" stroke-linecap="round" fill="none" opacity="0.45" />
+
+      <!-- Right Shoulder Cool Blue Light (from fill light) -->
+      <path d="M870,980 C860,840 815,710 680,655" stroke="#3B82F6" stroke-width="5" stroke-linecap="round" fill="none" opacity="0.4" />
+
+      <!-- Inner Crewneck T-Shirt (Deep Black) -->
+      <path d="M420,650 Q500,700 580,650 L590,720 Q500,760 410,720 Z" fill="#040405" />
+
+      <!-- Hoodie Center Zipper Track -->
+      <line x1="500" y1="720" x2="500" y2="1000" stroke="#2B2D31" stroke-width="4.5" stroke-dasharray="3,3" />
+      <circle cx="500" cy="725" r="6" fill="#9CA3AF" />
+
+      <!-- Drawstrings with Metal Aglets (Iconic to the photo) -->
+      <!-- Left Drawstring -->
+      <path d="M445,670 Q435,780 445,860" stroke="#18181A" stroke-width="7" stroke-linecap="round" fill="none" />
+      <path d="M443,670 Q433,780 443,860" stroke="#2D3036" stroke-width="1.5" stroke-linecap="round" fill="none" />
+      <!-- Left Metal Aglet -->
+      <rect x="440" y="860" width="9" height="28" rx="3" fill="url(#metalAglet)" />
+
+      <!-- Right Drawstring -->
+      <path d="M555,670 Q565,780 555,860" stroke="#18181A" stroke-width="7" stroke-linecap="round" fill="none" />
+      <path d="M557,670 Q567,780 557,860" stroke="#2D3036" stroke-width="1.5" stroke-linecap="round" fill="none" />
+      <!-- Right Metal Aglet -->
+      <rect x="551" y="860" width="9" height="28" rx="3" fill="url(#metalAglet)" />
+
+      <!-- Hood Collar Folded Behind Neck -->
+      <path d="M350,640 Q410,580 440,630 Q500,655 560,630 Q590,580 650,640 Q590,710 500,710 Q410,710 350,640 Z" fill="#1C1D21" stroke="#0E0F11" stroke-width="3" />
+    </g>
+
+    <!-- 2. NECK & JAW -->
+    <g id="neck">
+      <!-- Neck Base -->
+      <path d="M430,510 L430,660 Q500,685 570,660 L570,510 Z" fill="#B37851" />
+      <!-- Chin Shadow on Neck -->
+      <path d="M430,510 Q500,600 570,510 L570,560 Q500,640 430,560 Z" fill="url(#neckShadow)" />
+      <!-- Throat Depth Line -->
+      <path d="M497,575 Q500,590 503,575" stroke="#784424" stroke-width="3" fill="none" stroke-linecap="round" />
+    </g>
+
+    <!-- 3. HEAD & FACE -->
+    <g id="head">
+      <!-- Left Ear (with golden rim light) -->
+      <path d="M355,340 C325,340 325,430 360,450 Z" fill="#BA835C" stroke="#9C623C" stroke-width="2" />
+      <path d="M348,365 Q338,400 352,425" stroke="#7A4522" stroke-width="3.5" fill="none" />
+      <path d="M336,355 Q330,390 340,420" stroke="#F59E0B" stroke-width="3" fill="none" opacity="0.65" />
+
+      <!-- Right Ear (with cool shadow) -->
+      <path d="M645,340 C675,340 675,430 640,450 Z" fill="#A8714C" stroke="#874F2B" stroke-width="2" />
+      <path d="M652,365 Q662,400 648,425" stroke="#663618" stroke-width="3.5" fill="none" />
+
+      <!-- Face Contour -->
+      <path d="M365,300 C365,170 405,100 500,100 C595,100 635,170 635,300 C635,430 595,530 500,540 C405,530 365,430 365,300 Z" fill="url(#skinCenter)" />
+
+      <!-- Left Cheek Warm Light Overlay -->
+      <path d="M370,260 Q380,390 440,480" stroke="url(#warmSkinGlow)" stroke-width="22" stroke-linecap="round" fill="none" />
+
+      <!-- Right Cheek Cool Fill Overlay -->
+      <path d="M630,260 Q620,390 560,480" stroke="url(#coolSkinGlow)" stroke-width="18" stroke-linecap="round" fill="none" />
+
+      <!-- Sculpted Jawline Shade -->
+      <path d="M390,410 Q420,500 500,535 Q580,500 610,410" fill="none" stroke="#703C1A" stroke-width="4" opacity="0.5" />
+    </g>
+
+    <!-- 4. FACIAL FEATURES (Accurate to photo) -->
+    <g id="features">
+      <!-- Full Groomed Eyebrows -->
+      <!-- Left Eyebrow -->
+      <path d="M400,285 Q440,270 475,286" stroke="#101012" stroke-width="12" stroke-linecap="round" fill="none" />
+      <path d="M396,287 Q438,274 473,288" stroke="#222328" stroke-width="3" stroke-linecap="round" fill="none" />
+
+      <!-- Right Eyebrow -->
+      <path d="M525,286 Q560,270 600,285" stroke="#101012" stroke-width="12" stroke-linecap="round" fill="none" />
+      <path d="M527,288 Q562,274 604,287" stroke="#222328" stroke-width="3" stroke-linecap="round" fill="none" />
+
+      <!-- Realistic Focused Eyes -->
+      <!-- Left Eye -->
+      <ellipse cx="438" cy="324" rx="22" ry="12" fill="#F8FAFC" />
+      <circle cx="440" cy="324" r="11" fill="#2E1B10" />
+      <circle cx="440" cy="324" r="6" fill="#0A0A0C" />
+      <circle cx="444" cy="320" r="2.5" fill="#FFFFFF" />
+      <path d="M416,320 Q438,308 460,320" stroke="#3D2010" stroke-width="4.5" fill="none" />
+      <path d="M418,326 Q438,335 458,326" stroke="#7A4522" stroke-width="2" fill="none" />
+
+      <!-- Right Eye -->
+      <ellipse cx="562" cy="324" rx="22" ry="12" fill="#F8FAFC" />
+      <circle cx="560" cy="324" r="11" fill="#2E1B10" />
+      <circle cx="560" cy="324" r="6" fill="#0A0A0C" />
+      <circle cx="564" cy="320" r="2.5" fill="#FFFFFF" />
+      <path d="M540,320 Q562,308 584,320" stroke="#3D2010" stroke-width="4.5" fill="none" />
+      <path d="M542,326 Q562,335 582,326" stroke="#7A4522" stroke-width="2" fill="none" />
+
+      <!-- Modern Black Rectangular Spectacles (Matching Photo Exactly) -->
+      <g id="spectacles" filter="url(#shadowDepth)">
+        <!-- Nose Bridge -->
+        <path d="M475,314 Q500,307 525,314" stroke="#0D0E10" stroke-width="8.5" fill="none" stroke-linecap="round" />
+        <path d="M477,314 Q500,309 523,314" stroke="#272A30" stroke-width="2" fill="none" stroke-linecap="round" />
+
+        <!-- Left Lens Frame -->
+        <rect x="390" y="294" width="88" height="58" rx="14" fill="url(#lensReflect)" stroke="#090A0D" stroke-width="9" />
+        <!-- Left Frame Bevel Highlight -->
+        <path d="M394,300 L470,300" stroke="#3B3E46" stroke-width="2.5" stroke-linecap="round" fill="none" />
+        <!-- Left Temple Arm -->
+        <line x1="390" y1="308" x2="350" y2="340" stroke="#0D0E10" stroke-width="7" stroke-linecap="round" />
+
+        <!-- Right Lens Frame -->
+        <rect x="522" y="294" width="88" height="58" rx="14" fill="url(#lensReflect)" stroke="#090A0D" stroke-width="9" />
+        <!-- Right Frame Bevel Highlight -->
+        <path d="M526,300 L602,300" stroke="#3B3E46" stroke-width="2.5" stroke-linecap="round" fill="none" />
+        <!-- Right Temple Arm -->
+        <line x1="610" y1="308" x2="650" y2="340" stroke="#0D0E10" stroke-width="7" stroke-linecap="round" />
+
+        <!-- Subtle Glass Reflection Sheen Arc -->
+        <path d="M400,340 Q430,305 465,315" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.35" />
+        <path d="M535,340 Q565,305 600,315" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.35" />
+      </g>
+
+      <!-- Nose Structure -->
+      <path d="M495,300 L490,385 Q490,400 500,405 Q510,400 510,385" stroke="#874D26" stroke-width="4" fill="none" stroke-linejoin="round" />
+      <path d="M478,396 Q488,390 498,398" stroke="#5E3114" stroke-width="3" fill="none" />
+      <path d="M502,398 Q512,390 522,396" stroke="#5E3114" stroke-width="3" fill="none" />
+
+      <!-- Mustache (Neat, groomed) -->
+      <path d="M468,432 Q500,422 532,432 Q520,450 500,446 Q480,450 468,432 Z" fill="#111114" />
+      <path d="M474,435 Q500,428 526,435" stroke="#25262B" stroke-width="2" fill="none" />
+
+      <!-- Lips -->
+      <path d="M472,456 Q500,452 528,456" stroke="#6E3120" stroke-width="4" fill="none" stroke-linecap="round" />
+      <path d="M476,460 Q500,476 524,460" stroke="#9C4D38" stroke-width="3.5" fill="none" stroke-linecap="round" />
+
+      <!-- Trimmed Short Boxed Beard & Chin Goatee -->
+      <path d="M465,482 Q500,496 535,482 Q528,522 500,536 Q472,522 465,482 Z" fill="#111114" opacity="0.95" />
+      <!-- Stubble Texture along Jawline -->
+      <path d="M380,390 Q410,480 460,520" stroke="#141518" stroke-width="8" stroke-dasharray="4,3" fill="none" opacity="0.8" />
+      <path d="M620,390 Q590,480 540,520" stroke="#141518" stroke-width="8" stroke-dasharray="4,3" fill="none" opacity="0.8" />
+    </g>
+
+    <!-- 5. VOLUMINOUS CURLY DARK HAIR (Identical to uploaded photo) -->
+    <g id="curly-hair">
+      <!-- Dark Hair Base Volume -->
+      <path d="M360,330 C320,280 300,160 360,70 C410,0 520,-20 600,10 C670,35 710,120 685,220 C680,270 660,320 635,340 C635,230 610,140 570,110 C480,90 410,140 375,300 Z" fill="#0C0D0F" />
+
+      <!-- Dense Layered Curl Clusters & Rings -->
+      <!-- Top Volume Curls -->
+      <circle cx="430" cy="50" r="52" fill="#141518" />
+      <circle cx="500" cy="25" r="56" fill="#1A1B1F" />
+      <circle cx="570" cy="35" r="54" fill="#16171B" />
+      <circle cx="630" cy="75" r="50" fill="#121316" />
+
+      <!-- Left Crown Curls -->
+      <circle cx="360" cy="110" r="48" fill="#16171B" />
+      <circle cx="330" cy="175" r="46" fill="#131417" />
+      <circle cx="325" cy="245" r="42" fill="#111215" />
+      <circle cx="340" cy="305" r="35" fill="#141518" />
+
+      <!-- Right Crown Curls -->
+      <circle cx="675" cy="140" r="46" fill="#141518" />
+      <circle cx="690" cy="205" r="44" fill="#111215" />
+      <circle cx="675" cy="270" r="40" fill="#131417" />
+      <circle cx="650" cy="325" r="35" fill="#111215" />
+
+      <!-- Detailed Curl Loops with Realistic Studio Highlights -->
+      <!-- Warm rim on left curls -->
+      <path d="M330,140 Q315,80 360,50 Q400,20 450,25" stroke="#F59E0B" stroke-width="3" fill="none" opacity="0.45" />
+      <path d="M320,200 Q305,240 330,270" stroke="#F59E0B" stroke-width="2.5" fill="none" opacity="0.4" />
+      <path d="M375,85 Q400,45 440,75" stroke="#F59E0B" stroke-width="2" fill="none" opacity="0.35" />
+
+      <!-- Top Curl Definition Rings -->
+      <path d="M390,120 Q420,80 455,120 Q485,80 520,115 Q555,80 590,120 Q625,85 650,135" stroke="#32353E" stroke-width="5.5" stroke-linecap="round" fill="none" />
+      <path d="M410,80 Q450,45 490,80 Q530,45 570,78 Q610,50 640,90" stroke="#454854" stroke-width="4.5" stroke-linecap="round" fill="none" />
+
+      <!-- Forehead Wisps & Soft Overhanging Curls -->
+      <path d="M380,185 Q405,170 395,210" stroke="#25272E" stroke-width="4.5" stroke-linecap="round" fill="none" />
+      <path d="M415,190 Q435,175 430,215" stroke="#25272E" stroke-width="4" stroke-linecap="round" fill="none" />
+      <path d="M570,185 Q590,170 585,215" stroke="#25272E" stroke-width="4" stroke-linecap="round" fill="none" />
+      <path d="M605,190 Q625,175 620,220" stroke="#25272E" stroke-width="4.5" stroke-linecap="round" fill="none" />
+    </g>
+  </g>
+</svg>

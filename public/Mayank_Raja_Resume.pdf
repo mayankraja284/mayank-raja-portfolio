@@ -1,0 +1,106 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> /Contents 6 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+6 0 obj
+<< /Length 2136 >>
+stream
+BT
+/F2 22 Tf
+50 740 Td
+(MAYANK RAJA) Tj
+0 -18 Td
+/F1 11 Tf
+(Computer Science & Engineering Student | Dayananda Sagar College of Engineering) Tj
+0 -15 Td
+/F1 9 Tf
+(Bangalore, Karnataka  |  GitHub: github.com/mayankraja284  |  LinkedIn: linkedin.com/in/mayank-raja-81568b36b) Tj
+0 -22 Td
+/F2 13 Tf
+(EDUCATION) Tj
+0 -14 Td
+/F2 10 Tf
+(Dayananda Sagar College of Engineering, Bangalore) Tj
+0 -12 Td
+/F1 9 Tf
+(Bachelor of Engineering in Computer Science & Engineering  |  Current Year: 2nd Year  |  CGPA: 9.23 / 10) Tj
+0 -22 Td
+/F2 13 Tf
+(TECHNICAL SKILLS) Tj
+0 -14 Td
+/F2 10 Tf
+(Programming & Fundamentals: ) Tj
+/F1 9 Tf
+(C, C++, Python, Java, Data Structures & Algorithms, Object-Oriented Programming, Git) Tj
+0 -14 Td
+/F2 10 Tf
+(Web Development: ) Tj
+/F1 9 Tf
+(HTML, CSS, JavaScript, React, TypeScript, Tailwind CSS, REST APIs, Databases) Tj
+0 -14 Td
+/F2 10 Tf
+(Tools & Workflows: ) Tj
+/F1 9 Tf
+(Git, GitHub, VS Code, Linux/Unix, AI-assisted development tooling) Tj
+0 -22 Td
+/F2 13 Tf
+(PROJECTS) Tj
+0 -14 Td
+/F2 10 Tf
+(Data Pulse  |  Live Analytics & Telemetry Dashboard) Tj
+0 -12 Td
+/F1 9 Tf
+(- Built responsive real-time data streaming dashboard with interactive metrics visualization and latency graphs.) Tj
+0 -11 Td
+(- Tech Stack: React, TypeScript, Tailwind CSS, Vercel  |  Live: data-pulse-rust.vercel.app) Tj
+0 -16 Td
+/F2 10 Tf
+(Virtual Green Education  |  Sustainability & Environmental Learning Platform) Tj
+0 -12 Td
+/F1 9 Tf
+(- Developed interactive education platform featuring virtual field trips, eco simulations, and gamified quizzes.) Tj
+0 -11 Td
+(- Tech Stack: React, Modern Web Modules, Vercel  |  Live: idt-project-ten.vercel.app) Tj
+0 -16 Td
+/F2 10 Tf
+(Queueless  |  Digital Queue & Waiting Optimization (In Development)) Tj
+0 -12 Td
+/F1 9 Tf
+(- Architecting a digital workflow to reduce unnecessary physical waiting lines with live token tracking.) Tj
+0 -22 Td
+/F2 13 Tf
+(AREAS OF INTEREST & LEARNING) Tj
+0 -14 Td
+/F1 9 Tf
+(- Deepening algorithmic problem solving and advanced Data Structures & Algorithms.) Tj
+0 -12 Td
+(- Exploring AI-augmented developer tooling, modern web architectures, and scalable systems.) Tj
+ET
+endstream
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000251 00000 n 
+0000000321 00000 n 
+0000000396 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+2584
+%%EOF
