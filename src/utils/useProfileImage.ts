@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback } from 'react';
 
 const STORAGE_KEY = 'mayank_portfolio_avatar';
 const EVENT_NAME = 'mayank-avatar-updated';
+const DEFAULT_IMAGE = '/mayank.jpeg';
 
 export const useProfileImage = () => {
   const [imageSrc, setImageSrc] = useState<string>(() => {
@@ -9,7 +10,7 @@ export const useProfileImage = () => {
       const saved = localStorage.getItem(STORAGE_KEY);
       if (saved) return saved;
     }
-    return '/image.png';
+    return DEFAULT_IMAGE;
   });
 
   const [isCustom, setIsCustom] = useState<boolean>(() => {
@@ -24,55 +25,69 @@ export const useProfileImage = () => {
   const updatePhoto = useCallback((dataUrl: string) => {
     setImageSrc(dataUrl);
     setIsCustom(true);
+
     try {
       localStorage.setItem(STORAGE_KEY, dataUrl);
     } catch {
       // LocalStorage quota fallback
     }
-    window.dispatchEvent(new CustomEvent(EVENT_NAME, { detail: dataUrl }));
+
+    window.dispatchEvent(
+      new CustomEvent(EVENT_NAME, { detail: dataUrl })
+    );
+
     setNotification('Photo successfully applied!');
     setTimeout(() => setNotification(null), 3500);
   }, []);
 
   const resetPhoto = useCallback(() => {
     localStorage.removeItem(STORAGE_KEY);
-    setImageSrc('/image.png');
+    setImageSrc(DEFAULT_IMAGE);
     setIsCustom(false);
-    window.dispatchEvent(new CustomEvent(EVENT_NAME, { detail: '/avatar.svg' }));
+
+    window.dispatchEvent(
+      new CustomEvent(EVENT_NAME, { detail: DEFAULT_IMAGE })
+    );
+
     setNotification('Reset to default portrait');
     setTimeout(() => setNotification(null), 2500);
   }, []);
 
   useEffect(() => {
-    // 1. Listen for cross-component photo sync events
     const handleAvatarUpdate = (e: Event) => {
       const customEvent = e as CustomEvent<string>;
+
       if (customEvent.detail) {
         setImageSrc(customEvent.detail);
         setIsCustom(true);
       }
     };
+
     window.addEventListener(EVENT_NAME, handleAvatarUpdate);
 
-    // 2. Global Paste Handler (Ctrl+V / Cmd+V with image)
     const handlePaste = (e: ClipboardEvent) => {
       const items = e.clipboardData?.items;
       if (!items) return;
+
       for (let i = 0; i < items.length; i++) {
         if (items[i].type.startsWith('image/')) {
           const file = items[i].getAsFile();
+
           if (file) {
             const reader = new FileReader();
+
             reader.onload = (event) => {
               const res = event.target?.result as string;
               if (res) updatePhoto(res);
             };
+
             reader.readAsDataURL(file);
             break;
           }
         }
       }
     };
+
     window.addEventListener('paste', handlePaste);
 
     return () => {
@@ -82,12 +97,8 @@ export const useProfileImage = () => {
   }, [updatePhoto]);
 
   const handleImageError = () => {
-    if (imageSrc === '/image.png') {
-      setImageSrc('/avatar.png');
-    } else if (imageSrc === '/avatar.png') {
-      setImageSrc('/avatar.svg');
-    } else if (imageSrc !== '/avatar.svg') {
-      setImageSrc('/avatar.svg');
+    if (imageSrc !== DEFAULT_IMAGE) {
+      setImageSrc(DEFAULT_IMAGE);
     }
   };
 
